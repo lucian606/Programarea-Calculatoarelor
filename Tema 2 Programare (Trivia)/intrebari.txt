@@ -1,0 +1,92 @@
+Cat este cos(25-20-1*5) ?
+A.1
+B.0
+C.25
+D.3
+A
+Cat fac 2*2 ?
+A.2
+B.3
+C.5
+D.4
+D
+Ce inseamna "lexem" ?
+A.dictionar
+B.carte
+C.cuvant
+D.limbaj
+C
+Care joc a avut cele mai multe vanzari ?
+A.Diablo III
+B.Tetris
+C.Minecraft
+D.Super Mario Bros
+B
+Ce tara a castigat Campionatul Mondial de Fotbal in 2014 ?
+A.Brazilia
+B.Germania
+C.Romania
+D.Portugalia
+B
+In ce an a aparut filmul "Star Wars:Episode IV - A New Hope" ?
+A.1980
+B.1983
+C.1977
+D.1997
+C
+Cate strofe are poemul "Luceafarul" de Mihai Eminescu ?
+A.102
+B.98
+C.99
+D.100
+B
+Cine a inventat reteaua de socializare Facebook ?
+A.Steve Jobs
+B.Bill Gates
+C.Mark Zuckerberg
+D.Jeff Bezos
+C
+Prin cate tari trece Fluviul Dunarea ?
+A.10
+B.4
+C.8
+D.9
+A
+Cine a scris versurile imnului Romaniei "Desteapta-te,romane!" ?
+A.Anton Pann
+B.Andrei Muresanu
+C.Tudor Arghezi
+D.Ion Creanga
+B
+Pe cine joaca Peter Dinklage in serialul "Urzeala Tronurilor" ?
+A.Tyrion Lannister
+B.Jaime Lannister
+C.Tywin Lannister
+D.Jon Snow
+A
+In ce an a fost lansat jocul "World of Warcraft" ?
+A.2005
+B.2006
+C.2004
+D.2003
+C
+Care este desertul cu cea mai mare suprafata ?
+A.Sahara
+B.Arctic
+C.Gobi
+D.Antarctic
+D
+Cum a murit Abraham Lincoln ?
+A.din cauze naturale
+B.de diabet
+C.a fost impuscat la teatru
+D.a murit la vanatoare
+C 
+In anul 2018 cati ani au trecut de la infiintarea UPB ?
+A.200
+B.100
+C.50
+D.150
+A
+
+

@@ -1,0 +1,40 @@
+314CC Iliescu Lucian-Marius
+
+Implementarea programului a durat doua saptamani.
+
+Au fost create mai multe functii:codificare,decodificare,
+strdel,strins,suma,cmmdc.
+
+Pentru Cerinta 1 a fost folosita functia codificare si 
+a fost afisat rezultatul.
+
+Pentru Cerinta 2 a fost folosita functia decodificare si
+a fost afisat rezultatul.
+
+Pentru Cerinta 3 a fost utilizat un pointer *flag si 
+functiile codificare,strdel si strins .Prin intermediul pointerului 
+vedeam daca cuvantul gresit exista in propozitie.In caz afirmativ,
+cuvantul gresit era sters cu strdel si apoi cuvantul corect era 
+introdus cu strins,modificarile pastrandu-se prin intermediul
+pointerului.A fost utilizat un vectori de structuri ,fiecare 
+structura continea doua siruri de caractere:un cuvant gresit si un 
+cuvant corect,inlocuirea cuvantului gresit cu cel corect se facea
+pentru fiecare element al vectorului alocat dinamic,unde era cazul.
+Dupa ce propozitia a fost modificata,a fost utilizata
+functia codificare pentru a afisa textul corectat codificat.
+
+Pentru Cerinta 4 au fost utilizate functiile codificare,suma si cmmdc.
+Se parcurce mesajul codificat caracter cu caracter si in functie de
+codul ascii al caracterului se formeaza elementele vectorului de numere.
+Se tine evidenta numarului de componente prin intermediul variabilei nr,
+vectorul alocandu-se dinamic.Valoarea maxima ii este atribuita 
+primului numar din vector,apoi vectorul este parcurs si daca elementul 
+curent este mai mare decat maximul se face interschimbarea,iar 
+valoarea maxima va fi cea a elementului curent.Variabila ok
+imi spune daca vectorul are elemente prime intre ele(1-Da si 0-Nu).Se parcurge
+vectorul si se verifica daca elementele au cel mai mare divizor comun 1,daca
+cmmdc este diferit de 1 ,ok va lua valoarea 0.Se calculeaza numarul de cifre
+din cod si suma cifrelor din cod.N este restul impartirii sumei cifrelor la 9.
+Se verifica daca numarul de cifre se imparte exact la N,in caz afirmativ se
+formeaza vectorul de grupuri de N cifre si se sorteaza descrescator,vectorul
+sortat fiind afisat,iar in caz contrar se va afisa 0.

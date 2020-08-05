@@ -1,0 +1,66 @@
+314CC Iliescu Lucian-Marius
+
+Implementarea programului a durat 5 saptamani.
+
+Pentru realizarea interfetei grafice au fost folosite bibliotecile
+ncurses(#include ncurses.h) si panels(#include panels.h).
+Bibiloteca panels.h face parte din pachetul curses care poate fi obtinut
+pe o distributie Linux bazata pe Debian cu: apt-get install libncurses5-dev.
+Biblioteca panels permite ascunderea si afisarea ferestrelor prin
+panouri,lucru ce ajuta la continuarea jocului,deoarece atunci cand 
+se apasa Q fereastra jocului va fi ascunsa,aceasta afisandu-se daca
+se continua jocul sau va fi inlocuita automat de una noua daca se 
+incepe un joc nou.
+
+Setul de instructiuni update_panels() si douptade() este folosit 
+periodic pentru a actualiza continutul panourilor din punct de vedere
+vizual,atunci cand se fac diferite modificari.La fel si in cazul setului
+de instructiuni (time_t mytime=time(NULL); char *time_str=ctime(&mytime);
+time_str[strlen(time_str)-1]='\0'; wprintw(timp,"%s",time_str);) 
+care va asigura actualizarea timpului la apasarea unei taste.
+
+S-au utilizat diferite bucle infinite de genu "while(1) break;" 
+pentru a putea fi etichetate si pentru a putea folosi instructiunea 
+goto in cazul in care dorim sa ne ducem la o anumita linie a programului,
+in general in cazurile in care se apasa q si se reintra in joc.
+
+Programul creeaza o fereastra pentru meniu,timp,joc,scor si variantele ajutatoare.
+Fiecarei ferestre i se atribuie un panou,pentru a putea ascunde diferite
+panouri cum ar fi scorul,varianta ajutatoare si jocul atunci cand ne aflam
+in meniul principal.Atunci cand jocul este inceput si se apasa tasta Q panoul
+jocului este ascuns si va fi afisat cand este selectata optiunea Resume Game,iar
+atunci cand este selectat New Game continutul panoului va fi golit.Fisierul contine
+intrebarile ,iar la fiecare 6 linii se afla raspunsurile la fiecare intrebare,primele
+5 linii se afiseaza,iar a 6a este memorata intr-o variabila.Dupa ce s-a raspuns la intrebare 
+se afiseaza urmatoarele 5 linii (intrebarea+variantele) si se memoreaza raspunsul corect la 
+intrebarea curenta(linia 6),procesul se repeta pana cand nu mai sunt linii de citit in fisier,
+trecandu-se la urmatorul fisier,iar daca nu mai sunt fisiere de citit se va afisa ecranul final 
+care va afisa scorul,numarul de intrebari la care s-a raspuns corect si gresit.
+
+Modul de joc:jucatorul va introduce de la tastatura tasta care ii corespunde variantei de
+raspuns pe care vrea sa o dea (A,B,C,D) sau va putea folosi una dintre variantele ajutatoare
+(50/50 prin apasarea tastei F sau poate sari intrebarea prin apasarea tastei E).Aceste 
+variante ajutatoare pot fi folosite o singura data pe parcursul jocului.Daca jucatorul a
+introdus o alta tasta programul va astepta pana cand acesta introduce una valida.
+Dupa ce s-a raspuns la intrebare cu o varianta se va sterge continutul ferestrei
+de joc si se va actualiza scorul in functie de corectitudinea raspunsului dat.
+
+Despre variantele ajutatoare:
+
+Skip the question-functioneaza similar cu algoritmul pe baza caruia se raspunde la
+intrebare,se va sterge continutul ferestrei de joc,se va sterge fereastra pentru
+Skip the question(ca sa evidentieze faptul ca varianta nu mai poate fi folosita)
+si se va afisa urmatoarea intrebare cu variantele de raspuns.Singura diferenta
+este faptul ca nu se va mai schimba scorul.
+
+50/50-mai intai se retine intrebarea intr-un string.Variantele intrebarii sunt 
+retinute intr-un vector de stringuri.Raspunsul este si el retinut intr-o variabila.
+Pentru fiecare pozitie a vectorului de stringuri s-a facut o variabila ok,
+care initial este 0.Fiecare pozitie reprezinta o varianta(0-A,1-B,2-C,3-D).
+Ca sa nu se elimine varianta corecta se va initializa variabila ok pentru
+acea varianta cu 1 (de exemplu daca C este varianta corecta : ok[2]=1).
+Apoi se alege un numar de la 0 la 3 si pana cand a fost ales un numar
+care are variabila ok=0.Astfel doua variante vor avea ok=1 si vor fi 
+afisate in ordine,una din ele fiind cea corecta.Se sterge continutul ferestrei
+de joc si se va afisa intrebarea si cele doua variante ramase.Se va
+sterge continutul fereastrei 50/50. 
